@@ -5,7 +5,7 @@ load_dotenv()
 
 def generate_image(prompt: str):
   api_key = os.getenv('CLIPDROP_API_KEY')
-  filename = 'generated_image.png'
+  filename = 'output/generated_image.png'
   r = requests.post('https://clipdrop-api.co/text-to-image/v1',
     files = {
         'prompt': (None, prompt, 'text/plain')
